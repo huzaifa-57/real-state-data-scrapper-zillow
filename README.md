@@ -2,7 +2,7 @@
 This repository is created for the assessment test of SlashByte Studio
 
 ## Overview
-This Python script allows users to scrape real estate data from Zillow for a specified location. It retrieves property details such as price, address, and URL and saves the data in a JSON format.
+The Python script `real_state_scrapper_test.py` allows users to scrape real estate data from Zillow for a specified location. It retrieves property details such as price, address, and URL and saves the data in a JSON format.
 
 ## Dependencies
 - Python 3.x
