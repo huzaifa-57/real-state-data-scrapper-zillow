@@ -26,7 +26,7 @@ class RealEstateScraper:
             with requests.Session() as session:
                 response = session.get(url, headers=self.headers)
                 if response.status_code == 200:
-                    print('Success')
+                    print('Connection Establishment Success')
                     soup = BeautifulSoup(response.content, 'html.parser')
                     listings = soup.find_all('li')
 
@@ -35,8 +35,6 @@ class RealEstateScraper:
                     for listing in listings:
                         if listing is not None:
                             property_url = listing.find('a', attrs={'data-test': 'property-card-link'})
-                            if property_url is None:
-                                print()
                             if property_url is not None:
                                 property_url = property_url.attrs['href']
                                 address = listing.find('address', attrs={'data-test': 'property-card-addr'}).text
