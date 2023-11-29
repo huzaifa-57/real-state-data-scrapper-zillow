@@ -62,7 +62,7 @@ class RealEstateScraper:
 
 class DataProcessor:
     @staticmethod
-    def save_to_json(data: list, filepath: str):
+    def save_to_json(data, filepath):
         if data:
             try:
                 with open(filepath, 'w', encoding='utf-8') as json_file:
